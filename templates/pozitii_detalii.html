@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Pagina de Pozitie</title>
+{% endblock %}
+
+{% block content %}
+
+    <h3>{{ context2.pozitie }}</h3>
+
+    {{ context2.descrierea_jobului |safe| linebreaks}}
+
+{% endblock %}

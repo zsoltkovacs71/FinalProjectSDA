@@ -1,0 +1,44 @@
+.nav-item {
+  font-size: 18px;
+}
+
+.nav-item:hover {
+  background-color: black;
+  border-radius: 10px;
+}
+
+h3 {
+  color: blue;
+}
+
+.pozitii {
+        background-color: lightgrey;
+        border-radius: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+        text-align:center;
+        width: 320px;
+        min-height: 400px;
+        padding: 20px;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+.pozitii_promovate {
+        background-color: red;
+        border-radius: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+        text-align:center;
+        width: 320px;
+        min-height: 400px;
+        padding: 20px;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+
+.pozitii:hover {
+        box-shadow: .5px .5px 10px .5px orange;
+    }
+

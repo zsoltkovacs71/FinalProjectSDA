@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    {% for p in pozitii_promovate %}
+        <div class="pozitii_promovate">
+            <h4>{{ p.companie }}</h4>
+            <img src="{{ p.logo.url }}" alt="imagine" style="height: 100px;">
+            <br> <br>
+            <h3>{{ p.denumirea_pozitiei }}</h3>
+            <br> <br>
+            <h6>{{ p.locatie }}</h6>
+            <br> <br>
+            <div class="detalii">
+                <a href="{% url 'pozitii_detalii_view' id=p.id %}"> Detalii </a>
+            </div>
+            {% if user.is_authenticated %}
+            <a href="{%  url 'pozitie_update_view' pk=p.id %}"><i class="fas fa-edit"></i></a> <a href="{%  url 'pozitie_delete_view' pk=p.id %}"><i class="fas fa-trash-alt"></i></a> </td>
+            {% endif %}
+        </div>
+
+
+    {% endfor %}
+
+
+    {% for p in toate_pozitiile %}
+        <div class="pozitii">
+            <h4>{{ p.companie }}</h4>
+            <img src="{{ p.logo.url }}" alt="imagine" style="height: 100px;">
+            <br> <br>
+            <h3>{{ p.denumirea_pozitiei }}</h3>
+            <br> <br>
+            <h6>{{ p.locatie }}</h6>
+            <br> <br>
+            <div class="detalii">
+                <a href="{% url 'pozitii_detalii_view' id=p.id %}"> Detalii </a>
+            </div>
+            {% if user.is_authenticated %}
+            <a href="{%  url 'pozitie_update_view' pk=p.id %}"><i class="fas fa-edit"></i></a> <a href="{%  url 'pozitie_delete_view' pk=p.id %}"><i class="fas fa-trash-alt"></i></a> </td>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+
+{% endblock %}
